@@ -26,7 +26,7 @@ const overrides = {
     Heading,
     Link,
     Text,
-    // ...add new components here
+    // ...add new custom components here
   },
 };
 
