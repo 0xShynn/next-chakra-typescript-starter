@@ -1,8 +1,8 @@
-import { Box, Center, Flex, Heading, Text } from '@chakra-ui/react';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Footer from 'src/components/Footer';
-import Header from 'src/components/Header';
+import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Footer from "src/components/Footer";
+import Header from "src/components/Header";
 
 const Home: NextPage = () => {
   return (

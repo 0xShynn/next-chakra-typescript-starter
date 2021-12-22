@@ -1,5 +1,5 @@
-import { Box, Text } from '@chakra-ui/react';
-import { FunctionComponent } from 'react';
+import { Box, Text, Heading } from "@chakra-ui/react";
+import { FunctionComponent } from "react";
 
 const Header: FunctionComponent = () => {
   return (

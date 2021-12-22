@@ -11,6 +11,6 @@ const heading = {
   },
   // default values for `size` and `variant`
   defaultProps: {},
-}
+};
 
-export default heading
+export default heading;
