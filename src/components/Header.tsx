@@ -1,7 +1,8 @@
-import { Box, Text, Heading } from "@chakra-ui/react";
-import { FunctionComponent } from "react";
+import { ComponentType } from "react";
 
-const Header: FunctionComponent = () => {
+import { Box, Text } from "@chakra-ui/react";
+
+const Header: ComponentType = () => {
   return (
     <Box bg="gray.300" p="5">
       <Text>Header</Text>

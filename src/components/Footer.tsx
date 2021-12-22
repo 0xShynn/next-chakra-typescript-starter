@@ -1,5 +1,6 @@
-import { Box, Text } from "@chakra-ui/react";
 import { ComponentType } from "react";
+
+import { Box, Text } from "@chakra-ui/react";
 
 const Footer: ComponentType = () => {
   return (
