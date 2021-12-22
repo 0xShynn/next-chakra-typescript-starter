@@ -16,6 +16,7 @@ const Home: NextPage = () => {
 
       <Box role="main" bg="gray.100">
         <Header />
+
         <Box p="5">
           <Text>Content</Text>
         </Box>

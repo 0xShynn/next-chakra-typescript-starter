@@ -1,6 +1,6 @@
 import { sharedBaseStyle, light, dark } from "./sharedStyleLinkButton";
 
-const button = {
+const Button = {
   baseStyle: {
     ...sharedBaseStyle,
   },
@@ -20,4 +20,4 @@ const button = {
   },
 };
 
-export default button;
+export default Button;
