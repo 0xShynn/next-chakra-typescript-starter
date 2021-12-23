@@ -10,6 +10,7 @@
     "pre-commit": "next lint --fix && git add -A ."
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",

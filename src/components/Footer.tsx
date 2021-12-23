@@ -1,11 +1,22 @@
 import { ComponentType } from "react";
 
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Center, Link, Text } from "@chakra-ui/react";
 
 const Footer: ComponentType = () => {
   return (
-    <Box role="contentinfo" bg="gray.200" p="5">
-      <Text>Footer</Text>
+    <Box role="contentinfo" p="5">
+      <Center>
+        <Text fontSize={"sm"}>
+          Next Chakra Starter TS made by{" "}
+          <Link
+            href="http://linktr.ee/anhek"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            Antonin Nhek
+          </Link>
+        </Text>
+      </Center>
     </Box>
   );
 };

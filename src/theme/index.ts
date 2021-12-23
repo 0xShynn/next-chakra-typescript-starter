@@ -7,6 +7,7 @@ import Button from "./components/button";
 import Heading from "./components/heading";
 import Link from "./components/link";
 import Text from "./components/text";
+import config from "./config";
 import fonts from "./fonts";
 import global from "./global";
 import textStyles from "./textStyles";
@@ -18,6 +19,7 @@ const overrides = {
   },
   breakpoints,
   colors,
+  config,
   fonts,
   textStyles,
   // ...add new settings here

@@ -1,11 +1,15 @@
 // Docs : https://chakra-ui.com/docs/theming/customize-theme#customizing-global-styles
-const global = {
-  // styles for the `body`
+
+import { mode } from "@chakra-ui/theme-tools";
+
+const global = (props: any) => ({
   body: {
-    fontSize: "16px",
+    fontSize: "18px",
     fontFamily: "body",
-    bg: "white",
+    // mode(lightMode, darkMode)(props) function is the same as
+    // props.colorMode === "dark" ? darkMode : lightMode
+    bg: mode("white", "gray.900")(props),
   },
-};
+});
 
 export default global;
