@@ -8,7 +8,7 @@ const global = (props: any) => ({
     fontFamily: "body",
     // mode(lightMode, darkMode)(props) function is the same as
     // props.colorMode === "dark" ? darkMode : lightMode
-    bg: mode("white", "gray.900")(props),
+    bg: mode("black", "gray.900")(props),
   },
 });
 

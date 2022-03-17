@@ -8,7 +8,7 @@
     "import/no-named-as-default": "off",
     "import/export": "warn",
     "import/order": [
-      "error",
+      "warn",
       {
         "alphabetize": {
           "order": "asc",
