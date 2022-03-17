@@ -2,6 +2,7 @@ import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
+import ContainerMaxWidth from "@/components/shared/ContainerMaxWidth";
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 
@@ -15,9 +16,11 @@ const Home: NextPage = () => {
       <Box role="main" bg={color}>
         <Header />
 
-        <Box p="5">
-          <Text>Content</Text>
-        </Box>
+        <ContainerMaxWidth>
+          <Box p={4} bg="red.300">
+            <Text>Container</Text>
+          </Box>
+        </ContainerMaxWidth>
       </Box>
 
       <Footer />

@@ -17,6 +17,7 @@ import { IoCloseSharp, IoLogoVue, IoMenuSharp } from "react-icons/io5";
 import { globals } from "../../constants";
 
 import ContainerMaxWidth from "./ContainerMaxWidth";
+import SocialIconsStack from "./SocialIconsStack";
 
 const Header: ComponentType = () => {
   // const bg = useColorModeValue("gray.200", "black");
@@ -59,6 +60,7 @@ const Header: ComponentType = () => {
 
           {/* Menu (desktop) */}
           <HStack display={{ base: "none", md: "flex" }}>
+            <SocialIconsStack />
             {displayNavLinks()}
           </HStack>
 
@@ -99,6 +101,7 @@ const Header: ComponentType = () => {
               >
                 {/* Navigation links from the globals constant file */}
                 {displayNavLinks()}
+                <SocialIconsStack />
               </VStack>
             </Box>
           </Fade>
