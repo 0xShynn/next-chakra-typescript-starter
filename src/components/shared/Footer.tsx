@@ -1,22 +1,28 @@
 import { ComponentType } from "react";
 
-import { Box, Center, Link, Text } from "@chakra-ui/react";
+import { Box, Link, Stack, Text } from "@chakra-ui/react";
+
+import SocialIconsStack from "./SocialIconsStack";
+
+import { MIGHTY_MINT_CONST } from "src/utils/constants";
 
 const Footer: ComponentType = () => {
   return (
-    <Box role="contentinfo" p="5">
-      <Center>
+    <Box role="contentinfo" bg="red.200">
+      <Stack w="full" direction="column" align="center">
+        <SocialIconsStack />
+
         <Text fontSize={"sm"}>
-          Next Chakra Starter TS made by{" "}
+          Project developed by{" "}
           <Link
-            href="http://linktr.ee/anhek"
+            href={MIGHTY_MINT_CONST.website_url}
             target={"_blank"}
             rel="noreferrer"
           >
-            Antonin Nhek
+            {MIGHTY_MINT_CONST.company_name}
           </Link>
         </Text>
-      </Center>
+      </Stack>
     </Box>
   );
 };

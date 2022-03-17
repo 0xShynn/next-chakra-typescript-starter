@@ -1,6 +1,6 @@
 import { HStack, Icon, Link } from "@chakra-ui/react";
 
-import { globals } from "src/constants";
+import { PROJECT_CONST } from "src/utils/constants";
 
 interface ISocialIcon {
   href: string;
@@ -18,7 +18,7 @@ const SocialIcon = ({ href, icon }: ISocialIcon) => {
 const SocialIconsStack = () => {
   return (
     <HStack spacing="4">
-      {globals.socialLinks.map((link, index) => (
+      {PROJECT_CONST.socialLinks.map((link, index) => (
         <SocialIcon key={index} {...link} />
       ))}
     </HStack>

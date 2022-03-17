@@ -14,10 +14,10 @@ import {
 import NextLink from "next/link";
 import { IoCloseSharp, IoLogoVue, IoMenuSharp } from "react-icons/io5";
 
-import { globals } from "../../constants";
-
 import ContainerMaxWidth from "./ContainerMaxWidth";
 import SocialIconsStack from "./SocialIconsStack";
+
+import { PROJECT_CONST } from "@/utils/constants";
 
 const Header: ComponentType = () => {
   // const bg = useColorModeValue("gray.200", "black");
@@ -38,7 +38,7 @@ const Header: ComponentType = () => {
   );
 
   const displayNavLinks = () =>
-    globals.navLinks.map((link, index) => (
+    PROJECT_CONST.navLinks.map((link, index) => (
       <NavLink key={index} to={link.href} label={link.label} />
     ));
 
