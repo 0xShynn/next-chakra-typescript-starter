@@ -2,7 +2,7 @@ import { ComponentType } from "react";
 
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 
-import ThemeToggler from "./ThemeToggler";
+import ThemeToggler from "../ThemeToggler";
 
 const Header: ComponentType = () => {
   const bg = useColorModeValue("gray.200", "black");

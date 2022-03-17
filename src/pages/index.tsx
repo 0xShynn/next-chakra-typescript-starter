@@ -2,8 +2,8 @@ import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/shared/Footer";
+import Header from "@/components/shared/Header";
 
 const Home: NextPage = () => {
   const color = useColorModeValue("gray.100", "gray.800");
