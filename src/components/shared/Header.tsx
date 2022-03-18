@@ -12,9 +12,10 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { IoCloseSharp, IoLogoVue, IoMenuSharp } from "react-icons/io5";
+import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 
 import ContainerMaxWidth from "./ContainerMaxWidth";
+import Logo from "./Logo";
 import SocialIconsStack from "./SocialIconsStack";
 
 import { PROJECT_CONST } from "@/utils/constants";
@@ -31,7 +32,7 @@ const Header: ComponentType = () => {
 
   const NavLink = ({ to, label }: NavLinkProps) => (
     <NextLink passHref href={to}>
-      <Link p="5" bg="red.200" w="full" textAlign="center">
+      <Link p="3" bg="red.200" w="full" textAlign="center">
         {label}
       </Link>
     </NextLink>
@@ -45,18 +46,9 @@ const Header: ComponentType = () => {
   return (
     <Box w="full" bg="red.100">
       <ContainerMaxWidth>
-        <Stack direction="row" justify="space-between" align="center">
+        <Stack direction="row" justify="space-between" align="center" h="70px">
           {/* Logo */}
-          <NextLink passHref href="/">
-            <Link display="inline-flex">
-              <Icon
-                as={IoLogoVue}
-                boxSize="36px"
-                color="blue"
-                _hover={{ color: "red" }}
-              />
-            </Link>
-          </NextLink>
+          <Logo />
 
           {/* Menu (desktop) */}
           <HStack display={{ base: "none", md: "flex" }}>
@@ -70,6 +62,7 @@ const Header: ComponentType = () => {
             aria-label="Open Menu"
             display={{ base: "block", md: "none" }}
             onClick={isOpen ? onClose : onOpen}
+            size="lg"
             icon={
               isOpen ? <Icon as={IoCloseSharp} /> : <Icon as={IoMenuSharp} />
             }
@@ -88,17 +81,11 @@ const Header: ComponentType = () => {
               h="100vh"
               left="0"
               // Change this value according to the height of the header
-              top="40px"
+              top="70px"
               onClick={isOpen ? onClose : onOpen}
+              zIndex="dropdown"
             >
-              <VStack
-                bg="white"
-                justify="flex-end"
-                zIndex={"overlay"}
-                spacing="2"
-                px="2"
-                py="2"
-              >
+              <VStack bg="white" justify="flex-end" spacing="2" px="2" py="2">
                 {/* Navigation links from the globals constant file */}
                 {displayNavLinks()}
                 <SocialIconsStack />
