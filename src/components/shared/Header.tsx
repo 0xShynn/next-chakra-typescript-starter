@@ -46,7 +46,13 @@ const Header: ComponentType = () => {
   return (
     <Box w="full" bg="red.100">
       <ContainerMaxWidth>
-        <Stack direction="row" justify="space-between" align="center" h="70px">
+        <Stack
+          direction="row"
+          justify="space-between"
+          align="center"
+          h="70px"
+          px="2"
+        >
           {/* Logo */}
           <Logo />
 

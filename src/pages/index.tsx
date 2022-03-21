@@ -1,4 +1,4 @@
-import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
@@ -19,6 +19,7 @@ const Home: NextPage = () => {
         <ContainerMaxWidth>
           <Box p={4} bg="red.300">
             <Text>Container</Text>
+            <Button variant="bubble">Hello le gang</Button>
           </Box>
         </ContainerMaxWidth>
       </Box>
