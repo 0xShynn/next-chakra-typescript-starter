@@ -1,11 +1,11 @@
 import { ComponentType } from "react";
 
-import { Box, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 
 import Logo from "./Logo";
 import SocialIconsStack from "./SocialIconsStack";
 
-import { MIGHTY_MINT_CONST } from "src/utils/constants";
+import { PROJECT_CONST } from "@/constants/projectConstants";
 
 const Footer: ComponentType = () => {
   return (
@@ -13,18 +13,7 @@ const Footer: ComponentType = () => {
       <Stack w="full" direction="column" align="center">
         <Logo />
 
-        <SocialIconsStack />
-
-        <Text fontSize={"sm"}>
-          Project developed by{" "}
-          <Link
-            href={MIGHTY_MINT_CONST.website_url}
-            target={"_blank"}
-            rel="noreferrer"
-          >
-            {MIGHTY_MINT_CONST.company_name}
-          </Link>
-        </Text>
+        <SocialIconsStack data={PROJECT_CONST.socialLinks} />
       </Stack>
     </Box>
   );

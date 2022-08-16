@@ -1,26 +1,58 @@
-import { HStack, Icon, Link } from "@chakra-ui/react";
+import { Circle, HStack, Icon, Link } from "@chakra-ui/react";
+import { FaDiscord } from "react-icons/fa";
+import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import { IconType } from "react-icons/lib";
 
-import { PROJECT_CONST } from "src/utils/constants";
+import { SocialLinkProps } from "@/types/SocialLinkProps";
 
-interface ISocialIcon {
-  href: string;
-  icon: any;
-}
-
-const SocialIcon = ({ href, icon }: ISocialIcon) => {
-  return (
-    <Link href={href} target="_blank" display={"inline-flex"}>
-      <Icon as={icon} boxSize="36px" color="red" _hover={{ color: "blue" }} />
-    </Link>
-  );
+type SocialIconsStackProps = {
+  data: SocialLinkProps[];
 };
 
-const SocialIconsStack = () => {
+let socialIcon: IconType;
+const SocialIconsStack = ({ data }: SocialIconsStackProps) => {
   return (
-    <HStack spacing="4">
-      {PROJECT_CONST.socialLinks.map((link, index) => (
-        <SocialIcon key={index} {...link} />
-      ))}
+    <HStack spacing="0">
+      {data.map((item, index) => {
+        switch (item.name) {
+          case "twitter":
+            socialIcon = IoLogoTwitter;
+            break;
+
+          case "github":
+            socialIcon = IoLogoGithub;
+            break;
+
+          case "linkedin":
+            socialIcon = IoLogoLinkedin;
+            break;
+
+          case "discord":
+            socialIcon = FaDiscord;
+            break;
+
+          default:
+            break;
+        }
+
+        return (
+          <Link
+            href={item.url}
+            target="_blank"
+            display={"inline-flex"}
+            key={index}
+          >
+            <Circle size="full" p={{ base: 3, md: 2 }} color="white">
+              <Icon
+                as={socialIcon}
+                boxSize="30px"
+                color="red"
+                _hover={{ color: "white" }}
+              />
+            </Circle>
+          </Link>
+        );
+      })}
     </HStack>
   );
 };
